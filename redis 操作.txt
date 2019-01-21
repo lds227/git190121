@@ -1,0 +1,45 @@
+增加一个值key为name     set name 'xx'
+查询name的值		get name
+跟新 name的值		set name 'xx'
+删除name的值		del name 
+查询是否存在name 0代表不存在  exists name
+
+
+List集合
+
+增加一个值key为ulist, value为a1,b1     lpush ulist 'a1' 'b1'
+查询key为ulist 的集合      		lrange ulist 0 -1
+尾部添加新元素				rpush ulist 'xx'  
+头部添加新元素				lpush ulist 'xx' 
+更新index为0 的值			lset ulist 0 'xx'
+删除index为0 的值			lrem ulist 0 'xx'
+
+set集合--   没有顺序，无法判断添加的元素在哪个位置
+
+增加一个值key为uset, value为a1,b1     	sadd uset 'a1' 'b1'
+查询key为uset 的集合      		smembers uset
+删除 values为love 返回1为成功		srem uset 'love'
+
+Hash 集合
+
+清除数据库		flushdb
+
+key为hash, 字段为a1 值为b1     	hset hash 'a1' 'b1'
+查询hash字段的长度		hlen hash
+查询hsah所有的字段		hkeys hash
+查询hsah所有值			hvals hash
+查询字段为a1的值		hget hash 'a1'
+获取key 为hash 的哈希集合的所有字段的值		hgetall hash 
+更新字段a1的值为123		hset hash 'a1' '123'
+删除 字段为a1 和值		hdel hash a1
+
+SortedSet 集合
+添加元素ay 分数1		zadd zset 1 'ay'
+按照分数有小到大查询zset集合	zrange zset 0 -1
+按照分数有大到小查询zset集合	zrevrange zset 0 -1
+查询元素ay的值			zscore zset 'ay'
+
+
+
+
+

@@ -1,0 +1,250 @@
+﻿VMware 
+host.domain
+host:root
+password:root23456
+VMware 
+host:baba.shan
+password:lds123456
+weblogic
+weblogic
+
+
+安装必要的工具
+# yum groupinstall "GNOME Desktop"
+#yum install epel-release
+
+#yum install yum-axelget
+
+#yum update
+#reboot
+
+#yum install gcc
+
+#yum install gcc-c++
+#yum install make
+
+#yum install gdb
+
+#yum install cmake
+
+#yum install git
+
+#yum install vim
+
+#yum install clang
+
+#yum install clang-analyzer
+
+#yum install ntpdate -y
+
+#ntpdate time.windows.com && hwclock -w
+
+
+常用命令：
+
+
+Ctrl+Alt :从屏幕退出  在图形界面使用 ctrl+alt+F2切换到dos界面  
+su :切换到超级管理员账户，需要输入root用户到密码
+
+sudo: 临时到获得超级管理员到权限。
+
+
+clear:清屏
+
+
+
+ls :列出目录下的文件
+
+touch 文件名 ：创建空白到文件
+
+
+vi 或者vim命令，用来编辑文件
+
+linux有7种命令交互通道，1-6通道是命令行模式，ctrl+shift+f1-f6
+第7种交互通道是图形化界面，ctrl+shift+f7
+如果想要在图形化界面中体验命令行，利用terminal终端。
+
+
+mkdir 文件夹到名字：创建文件夹
+
+
+ll:查看当前目录下所有文件到信息。
+
+
+d rwx rwx rwx：d表示文件夹
+   111  111   111   -----》转为10进制就是 7 7 7
+   总共是分为3组，第一组表示该文件到所有者具有到权限；第二组表示与该文件所有者处于同一组到人具有到权限；第三组表示组外用户具有到权限
+
+- rwx rwx rwx ：-表示普通文件
+
+
+cd：进入到某个文件夹里面
+
+cd ..:返回到父母录
+
+cd /:直接跳到系统根目录
+
+pwd：显示当前光标所在路径
+
+
+cp 要复制到文件名 复制到的位置
+
+
+mv:重命名或者移动
+mv 当前目录下到文件名 当前目录下的文件名 ，也就是说当这两个文件名在同一路径下到时候，就是重命名；
+
+mv 文件名 路径：此时表示移动文件
+
+
+rm:删除
+rm 
+rm -rf 文件名： 强制删除
+-f 文件夹的名称：-f表示如果要删除的文件不存在，不会有提示；
+
+rm -i 文件夹到名称：-i删除文件前会有提示
+rm 
+-r......。。。：-r 递归删除，删除该文件夹及其内部到所有文件
+
+
+man：帮助命令
+man 其他命令到名称，比如man rm,可以显示rm命令的所有参数及帮助文档。退出该文档，先esc，再：q
+
+cat和more：用来查看某个文件到内容。
+
+cat 文件名：直接打开该文件进行查看
+
+more 文件名：分页显示文件内容
+
+
+wc 文件名：统计文件里到字符数量
+53 70 1575 
+53表示有53行，70表示该文件中有70个单词，1575表示有1575个字符
+
+
+重定向：
+echo "hello" 
+> 文件名：把“hello”字符串重新输出到后面到文件中。
+注意：> 是覆盖模式
+      >> 是追加模式。
+
+echo "hello" 表示输出字符串
+
+链接：
+硬链接：ln a.txt b.txt 当修改了任意到一个文件，另一个文件也会跟着变化。
+
+软链接：ln -s a.txt b.txt 软链接相当于是快捷方式
+
+
+shutdown :关机命令
+
+shutdown -h now :立即关机
+
+shutdown -h 5 5分钟后关机
+
+shutdown -h 12:30 12.30分关机
+
+
+logout :注销功能
+
+
+pwd : 查看当前目录到绝对路径
+
+
+stat 文件 ：查看某个文件到详细信息
+
+
+who : 查看当前到在线用户
+
+whoami :查看当前用户
+
+
+hostname :查看主机名
+
+
+uname ：查看系统信息
+
+uname -a :查看系统到详细信息
+
+
+top : 查看当前正在运行到进程信息，每3秒刷新一次。
+
+ctrl+c 退出进程查看
+
+
+ps -axu :查看当前进程的快照
+
+
+du :查看文件大小
+
+
+df :查看盘符到可用空间
+
+
+ifconfig :查看ip地址信息
+ping 网址或者ip地址，ping一个网络是否畅通
+
+
+kill pid :杀死某个进程
+
+
+netstat :查看网络使用情况
+
+
+useradd 用户名 ：添加用户
+
+
+tab :自动补全
+pwd : 查看当前所在目录
+tar -zxvf 文件名 -C /目标目录 ：解压文件到指定目录
+passwd 用户名 ： 给用户设置密码
+
+chmod 755 文件名或者文件夹到名称 ：更改文件到权限
+
+
+chmod -R 755 文件名 ： 递归改变某个文件夹及其内部文件的权限
+
+linux中常用到压缩包格式：gz,zip,bzip,gz2....
+
+tar :常用到解压缩包到命令
+
+tar -xvf 压缩包文件名 :解压缩.gz包
+
+
+vi /etc/profile 配置jdk环境变量
+
+
+
+
+
+
+
+
+
+
+vi+ filename 打开文件
+i 进入编辑
+:q!    退出vi,不保存
+:wq   退出并保存
+
+
+
+文件权限
+ls
+
+ -l中显示的内容如下：
+
+-rwxrw-r‐-1 root root 1213 Feb 2 09:39 abc
+
+- 10个字符确定不同用户能对文件干什么
+
+- 第一个字符代表文件（-）、目录（d），链接（l）
+
+- 其余字符每3个一组（rwx），读（r）、写（w）、执行（x）
+
+- 第一组rwx：文件所有者的权限是读、写和执行
+
+- 第二组rw-：与文件所有者同一组的用户的权限是读、写但不能执行
+
+- 第三组r--：不与文件所有者同组的其他用户的权限是读不能写和执行
+
+也可用数字表示为：r=4，w=2，x=1  因此rwx=4+2+1=7

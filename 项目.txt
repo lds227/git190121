@@ -1,0 +1,25 @@
+ 1.安装JDK 配置环境变量
+2.安装eclipse
+3.Tomact ，eclipse 配置
+4.配置maven 环境变量 ，eclipse配置,安装插件
+5.安装maven仓库，eclipse配置仓库位置
+7.反编译插件
+8.先svn插件，在在项目右键team配置SVN的菜单
+6.安装masql ,navicat
+9.创建jpa工程前，为了让eclipse 生成类库配置 eclipselink压缩
+
+模板之家 
+JEECMS
+开源中国
+
+启动MySQL服务，cmd 进入到MySQL的bin，net start MySQL
+卸载 mysql -remove
+安装 在cmd 解压后在的bin目录下输入mysqld --install MySQL --defaults-file="D:\mysql5.6.17\my.ini"
+更改数据库密码mysqladmin -u root -p password 密码， 登录mysql -u root -p
+
+
+xml文件放置位置的原因。
+默认情况下前端控制器回去/WEB-INF/目录下去寻找一个xml文件，这个文件是servlet-name节点name后面拼接-servlet.xml 文件。比如springMVC-servlet.xml
+
+报错---The method 方法 of type 类 must override a superclass method
+是因为JDK 5不支持@Override等形式的批注，只要改成7以上就可以。

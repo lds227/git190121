@@ -1,0 +1,5 @@
+liunx服务器上默认没有安装zip命令，所以使用时需安装：
+apt-get install zip 或  yum install zip
+
+linux安装unzip命令：
+apt-get install unzip 或  yum install unzip
